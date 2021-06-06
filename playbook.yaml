@@ -6,7 +6,7 @@
 
   - name: Stop the running container
 
-    command: docker stop django-drf-automation_app_1
+    command: docker stop esj_backend_dev-fastapi_app-deployment_app_1
 
     ignore_errors: True
 
@@ -14,7 +14,7 @@
 
   - name: remove the running container
 
-    command: docker rm django-drf-automation_app_1
+    command: docker rm esj_backend_dev-fastapi_app-deployment_app_1
 
     ignore_errors: True
 
