@@ -6,11 +6,6 @@ services:
     image: esjgroupinc/django-drf
     ports:
       - 8000:80
-    environment:
-      - DB_HOST=db
-      - DB_NAME=mydb-dev
-      - DB_USER=django
-      - DB_PASS=password
     depends_on:
       - db
   
