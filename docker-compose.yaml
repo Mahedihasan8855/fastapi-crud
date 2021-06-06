@@ -5,7 +5,7 @@ services:
   app:
     image: esjgroupinc/django-drf
     ports:
-      - 8000:80
+      - 8000:8000
     depends_on:
       - db
   
