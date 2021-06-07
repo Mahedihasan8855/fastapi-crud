@@ -1,9 +1,19 @@
-import os
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
 
-from pydantic import BaseSettings, Field
+SQLALCHEMY_DATABASE_URL = "postgresql://fastapi_traefik:fastapi_traefik@db:5431/fastapi_traefik"
+
+engine = create_engine(SQLALCHEMY_DATABASE_URL)
+
+SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
+
+Base = declarative_base()
 
 
-class Settings(BaseSettings):
-    db_url: str = Field(..., env='DATABASE_URL')
-
-settings = Settings()
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
