@@ -6,8 +6,6 @@ services:
     image: esjgroupinc/python-fastapi
     ports:
       - 8000:8000
-    environment:
-      - DATABASE_URL="postgresql://postgres:postgres@postgres:5431/postgres"
     depends_on:
       - db
   
