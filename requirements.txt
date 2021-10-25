@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 asgiref==3.3.4
 bcrypt==3.2.0
 cffi==1.14.5
@@ -20,3 +21,11 @@ SQLAlchemy==1.4.17
 starlette==0.14.2
 typing-extensions==3.10.0.0
 uvicorn==0.14.0
+=======
+fastapi
+uvicorn
+sqlalchemy
+passlib
+bcrypt
+python-jose
+>>>>>>> ee57a4a0c85b08c3a7a0ec32b634e819a81ade12
