@@ -34,7 +34,6 @@ class ShowBlog(BaseModel):
     title: str
     body: str
     user_id: int
-    creator: ShowUser
 
     class Config():
         orm_mode = True
